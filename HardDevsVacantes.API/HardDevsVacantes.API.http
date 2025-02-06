@@ -1,0 +1,7 @@
+﻿@HardDevsVacantes.API_HostAddress = http://localhost:5140
+
+GET {{HardDevsVacantes.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
