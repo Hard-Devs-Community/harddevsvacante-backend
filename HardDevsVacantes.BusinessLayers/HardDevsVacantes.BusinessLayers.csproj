@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Dtos\" />
+    <None Remove="Interfaces\" />
+    <None Remove="Mappers\" />
+    <None Remove="Services\" />
+    <None Remove="Validators\" />
+    <None Remove="Interfaces\Base\" />
+    <None Remove="Dtos\SLibrary\" />
+    <None Remove="Interfaces\SLibrary\" />
+    <None Remove="Mappers\SLibrary\" />
+    <None Remove="Validators\HardDevsVacantes\" />
+    <None Remove="Services\HardDevsVacantes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dtos\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Mappers\" />
+    <Folder Include="Services\" />
+    <Folder Include="Interfaces\Base\" />
+    <Folder Include="Dtos\SLibrary\" />
+    <Folder Include="Mappers\SLibrary\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HardDevsVacantes.Core\HardDevsVacantes.Core.csproj" />
+    <ProjectReference Include="..\HardDevsVacantes.DataModel\HardDevsVacantes.DataModel.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Collection" Version="10.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.10.0" />
+  </ItemGroup>
+</Project>

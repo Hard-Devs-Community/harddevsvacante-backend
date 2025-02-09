@@ -1,2 +1,3 @@
-# S-Library
-Aplicación de Biblioteca Web
+# HardDevsVacantes
+
+Blog y página para publicar vacantes.
