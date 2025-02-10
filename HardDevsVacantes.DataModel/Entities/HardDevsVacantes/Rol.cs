@@ -8,7 +8,7 @@ namespace HardDevsVacantes.DataModel.Entities.HardDevsVacantes
 {
 	public class Rol
 	{
-		public int id {  get; set; }
-		public string nombre { get; set; } = default!;
+		public int Id {  get; set; }
+		public string Name { get; set; } = default!;
 	}
 }

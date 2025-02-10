@@ -10,12 +10,12 @@ namespace HardDevsVacantes.DataModel.Entities.HardDevsVacantes
 	public class VacantesUsuario
 	{
 		public int Id { get; set; }
-		public string Nombre { get; set; } = default!;
-		public string Contrasena { get; set; } = default!;
-		public string Username { get; set; } = default!;
-		public string Email { get; set; } = default!;
+		public string Name { get; set; } = String.Empty;
+		public string Password { get; set; } = String.Empty;
+		public string Username { get; set; } = String.Empty;
+		public string Email { get; set; } = String.Empty;
 
-		public int RolId { get; set; }
-		public Rol? Rol { get; set; } 
+		public int RoleId { get; set; }
+		public Rol? Role { get; set; } 
 	}
 }

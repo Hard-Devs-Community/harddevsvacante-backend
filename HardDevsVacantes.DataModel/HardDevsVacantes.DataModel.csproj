@@ -19,7 +19,6 @@
     <Folder Include="Context\" />
     <Folder Include="Context\Extensions\" />
     <Folder Include="Enums\" />
-    <Folder Include="Entities\HardDevsVacantes\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HardDevsVacantes.Core\HardDevsVacantes.Core.csproj" />

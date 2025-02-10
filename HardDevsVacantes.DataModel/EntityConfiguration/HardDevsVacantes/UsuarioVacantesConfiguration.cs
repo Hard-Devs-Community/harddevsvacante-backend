@@ -19,11 +19,11 @@ namespace HardDevsVacantes.DataModel.EntityConfiguration.HardDevsVacantes
 
 			builder.HasKey(x => x.Id);
 
-			builder.Property(x => x.Nombre)
+			builder.Property(x => x.Name)
 				.HasMaxLength(225)
 				.IsRequired();
 
-			builder.Property(x => x.Contrasena)
+			builder.Property(x => x.Password)
 				.HasMaxLength(225)
 				.IsRequired();
 
@@ -31,9 +31,9 @@ namespace HardDevsVacantes.DataModel.EntityConfiguration.HardDevsVacantes
 				.HasMaxLength(225)
 				.IsRequired();
 
-			builder.HasOne(x => x.Rol)
+			builder.HasOne(x => x.Role)
 				.WithMany()
-				.HasForeignKey(x => x.RolId);
+				.HasForeignKey(x => x.RoleId);
 		}
 	}
 }
