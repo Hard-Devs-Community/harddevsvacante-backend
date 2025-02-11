@@ -7,6 +7,9 @@ using HardDevsVacantes.Core.Base;
 using HardDevsVacantes.DataModel.Context.Extensions;
 using Microsoft.EntityFrameworkCore;
 using HardDevsVacantes.DataModel.Entities;
+using HardDevsVacantes.DataModel.Entities.HardDevsVacantes;
+using HardDevsVacantes.DataModel.EntityConfiguration.HardDevsVacantes;
+using HardDevsVacantes.DataModel.EntityConfiguration;
 
 namespace HardDevsVacantes.DataModel.Context
 {
@@ -25,45 +28,19 @@ namespace HardDevsVacantes.DataModel.Context
         public DbSet<Categoria> Categoria { get; set; }
         public DbSet<Libro> Libro { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<VacantesUsuario> Usuarios { get; set; }
+        public DbSet<Rol> Roles { get; set; }
 
         public MainDbContext(DbContextOptions<MainDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new UsuarioVacantesConfiguration());
+            modelBuilder.ApplyConfiguration(new RoleConfiguration());
+
             base.OnModelCreating(modelBuilder);
-            foreach (var type in modelBuilder.Model.GetEntityTypes())
-            {
-                if (typeof(EntityBase).IsAssignableFrom(type.ClrType))
-                {
-                    modelBuilder.SetSoftDeleteFilter(type.ClrType);
-                }
-            }
 
         }
-
-        public void SetAuditEntities()
-        {
-            foreach (var entry in ChangeTracker.Entries<EntityBase>())
-            {
-                if (entry.State != EntityState.Deleted)
-                {
-                    entry.State = EntityState.Modified;
-                    entry.Entity.Deleted = true;
-                }
-            }
-        }
-
-        public override int SaveChanges()
-        {
-            return base.SaveChanges();
-        }
-
-        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
-        {
-
-            return base.SaveChangesAsync(cancellationToken);
-        }
-
 
     }
     
