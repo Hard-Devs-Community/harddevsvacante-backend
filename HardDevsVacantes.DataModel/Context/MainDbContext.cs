@@ -4,7 +4,6 @@ using System.Data;
 using System.Net.NetworkInformation;
 using System.Reflection.Emit;
 using HardDevsVacantes.Core.Base;
-using HardDevsVacantes.DataModel.Context.Extensions;
 using Microsoft.EntityFrameworkCore;
 using HardDevsVacantes.DataModel.Entities;
 using HardDevsVacantes.DataModel.Entities.HardDevsVacantes;
@@ -24,10 +23,7 @@ namespace HardDevsVacantes.DataModel.Context
     {
         public DbSet<T> GetDbSet<T>() where T : EntityBase => Set<T>();
 
-        public DbSet<Autor> Autor { get; set; }
-        public DbSet<Categoria> Categoria { get; set; }
-        public DbSet<Libro> Libro { get; set; }
-        public DbSet<Usuario> Usuario { get; set; }
+       
         public DbSet<VacantesUsuario> Usuarios { get; set; }
         public DbSet<Rol> Roles { get; set; }
 

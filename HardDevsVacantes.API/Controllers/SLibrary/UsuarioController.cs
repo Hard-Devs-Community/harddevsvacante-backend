@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using HardDevsVacantes.BusinessLayers.Dtos;
 using HardDevsVacantes.BusinessLayers.Interfaces;
-using HardDevsVacantes.Controllers.Base;
 using HardDevsVacantes.DataModel.Context;
 using HardDevsVacantes.DataModel.Entities;
 

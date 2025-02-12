@@ -11,6 +11,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
     <PackageReference Include="Microsoft.Build.Tasks.Core" Version="17.8.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
@@ -27,7 +28,6 @@
     <None Remove="Controllers\SLibrary\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\Base\" />
     <Folder Include="Controllers\SLibrary\" />
   </ItemGroup>
   <ItemGroup>
